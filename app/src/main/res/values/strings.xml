@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PreSell</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="sign_up_text"><u>SIGN UP</u></string>
+    <string name="display_app_logo">Display app logo</string>
+    <string name="enter_without_text"><u>ENTER &amp; SIGN UP LATER</u></string>
+    <string name="back_arrow">back_arrow</string>
+    <string name="stock_image">stock image</string>
+    <string name="rect_content_descript">Confirm Register Rectangle</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="orders">Orders</string>
+    <string name="me">Me</string>
+
+</resources>

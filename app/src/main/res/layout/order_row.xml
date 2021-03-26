@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
+    android:baselineAligned="false">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50">
+        <RelativeLayout
+            android:id="@+id/left_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rectangle"
+            android:adjustViewBounds="true"
+            android:contentDescription="empty" />
+        <TextView
+            android:id="@+id/left_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/left_image_view"
+            android:layout_alignBottom="@id/left_image_view"
+            android:layout_margin="10dp"
+            android:textColor="@color/offWhite"
+            android:text="$X"/>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/left_header_linear_layout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/left_image_view"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:orientation="horizontal">-->
+<!--            <TextView-->
+<!--                android:id="@+id/left_time_header_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:drawableStart="@drawable/ic_clock"-->
+<!--                android:drawableTint="@color/darkBackground"-->
+<!--                android:drawablePadding="5dp"-->
+<!--                android:textStyle="italic"-->
+<!--                android:textColor="@color/darkBackground"-->
+<!--                android:text="Est. Time to Sale:"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="12sp" />-->
+<!--        </LinearLayout>-->
+        <TextView
+            android:id="@+id/left_time_prediction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/left_image_view"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/darkBackground"
+            android:text=">2 days"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50">
+        <RelativeLayout
+            android:id="@+id/right_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rectangle"
+            android:contentDescription="empty" />
+        <TextView
+            android:id="@+id/right_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/right_image_view"
+            android:layout_alignBottom="@id/right_image_view"
+            android:layout_margin="10dp"
+            android:textColor="@color/offWhite"
+            android:text="$X"/>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/right_header_linear_layout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/right_image_view"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:orientation="horizontal">-->
+<!--            <TextView-->
+<!--                android:id="@+id/right_time_header_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:drawableStart="@drawable/ic_clock"-->
+<!--                android:drawableTint="@color/darkBackground"-->
+<!--                android:drawablePadding="5dp"-->
+<!--                android:textStyle="italic"-->
+<!--                android:textColor="@color/darkBackground"-->
+<!--                android:text="Est. Time to Sale:"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="12sp" />-->
+<!--        </LinearLayout>-->
+        <TextView
+            android:id="@+id/right_time_prediction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/right_image_view"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/darkBackground"
+            android:text=">2 days"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

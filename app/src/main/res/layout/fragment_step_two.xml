@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/upload_design_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/lightBlue"
+        android:text="Upload your design:"/>
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/upload_design_text"
+        android:layout_centerHorizontal="true"
+        android:background="@color/red" />
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:layout_below="@id/selected_image"
+        android:background="@drawable/button_rounded_corners"
+        android:text="Choose From Camera"/>
+    <TextView
+        android:id="@+id/can_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upload_button"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="You can edit your design in the next step"/>
+    <Button
+        android:id="@+id/confirm_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/can_edit_text"
+        android:background="@drawable/button_rounded_corners"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:text="Confirm"/>
+
+</RelativeLayout>

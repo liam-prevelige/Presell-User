@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/past_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/lightBlue"
+        android:padding="5dp"
+        android:text="Past"/>
+
+    <TextView
+        android:id="@+id/current_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/past_text"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/lightBlue"
+        android:padding="5dp"
+        android:text="Current"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/orders_filters"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_toStartOf="@+id/orders_filters"
+        android:gravity="end"
+        android:textStyle="italic"
+        android:text="Sort by:"
+        android:textColor="@color/lightBlue" />
+
+    <Spinner
+        android:id="@+id/orders_filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp" />
+
+    <ListView
+        android:id="@+id/orders_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_below="@id/past_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="56dp">
+    </ListView>
+</RelativeLayout>

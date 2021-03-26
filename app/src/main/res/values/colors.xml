@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="darkBackground">#0B3954</color>
+    <color name="lightBlue">#457B9D</color>
+    <color name="orange">#EE6C4D</color>
+    <color name="lighterRed">#FF5A5F</color>
+    <color name="red">#C81D25</color>
+    <color name="offWhite">#E0FBFC</color>
+    <color name="lightButton">#98C1D9</color>
+
+</resources>

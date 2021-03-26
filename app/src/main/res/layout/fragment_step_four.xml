@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/lightBlue"
+        android:text="Set post preferences: "/>
+    <TextView
+        android:id="@+id/pricing_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:layout_below="@id/title_text"
+        android:textSize="12sp"
+        android:text="Note: Pricing is done automatically to maximize your profits!"/>
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_below="@id/pricing_text"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Title"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/selected_images_view_pager"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/cover_category_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cover photo category: "/>
+                <Spinner
+                    android:id="@+id/preferred_category_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/user_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/circle"/>
+                <TextView
+                    android:id="@+id/username_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkBackground"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Username"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/confirm_post_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_rounded_corners"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="Looks good? Upload &amp; Start Selling!"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

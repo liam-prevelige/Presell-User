@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:id="@+id/account_created_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha=".3">
+        <LinearLayout
+            android:id="@+id/deposit_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/deposit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_bank_24px"
+                android:drawableTint="@color/darkBackground"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:drawablePadding="5dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/lightBlue"
+                android:text="Preferred Method of Receiving Deposit (For Sellers):"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bank_deposit_methods_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:textColor="@color/darkBackground"
+            android:text="Bank Deposit Methods: "
+            android:layout_below="@id/deposit_container"/>
+
+        <RadioGroup
+            android:id="@+id/bank_deposit_methods_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bank_deposit_methods_text"/>
+        <TextView
+            android:id="@+id/debit_deposit_methods_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:textColor="@color/darkBackground"
+            android:text="Debit Deposit Methods: "
+            android:layout_below="@id/bank_deposit_methods_radio_group"/>
+
+        <RadioGroup
+            android:id="@+id/debit_deposit_methods_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/debit_deposit_methods_text"/>
+
+        <LinearLayout
+            android:id="@+id/deposit_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/debit_deposit_methods_radio_group"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/change_deposit_bank_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_rounded_corners"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_add_circle_outline_24px"
+                android:drawablePadding="5dp"
+                android:drawableTint="@android:color/holo_green_light"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12sp"
+                android:text="Link Bank"/>
+
+            <Button
+                android:id="@+id/change_deposit_debit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_rounded_corners"
+                android:drawableStart="@drawable/ic_add_circle_outline_24px"
+                android:drawablePadding="5dp"
+                android:drawableTint="@android:color/holo_green_light"
+                android:padding="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12sp"
+                android:text="Add Debit Card"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/current_balance_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deposit_button_container"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/darkBackground"
+            android:textStyle="bold"
+            android:text="Current Balance: $0.00"/>
+        <Button
+            android:id="@+id/deposit_now_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current_balance_text_view"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:background="@android:color/holo_green_light"
+            android:text="Deposit Now"/>
+        <TextView
+            android:id="@+id/sales_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deposit_now_button"
+            android:textColor="@color/darkBackground"
+            android:textSize="16sp"
+            android:text="My Sales:"/>
+        <ListView
+            android:id="@+id/sales_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sales_text_view"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/account_not_created_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/create_seller_background_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="20dp"
+            android:clickable="false"
+            android:background="@android:color/holo_green_light"
+            android:textSize="18sp"
+            android:text="Create Seller Account"/>
+        <Button
+            android:id="@+id/create_seller_acct_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:background="@android:color/holo_orange_light"
+            android:textSize="18sp"
+            android:text="Create Seller Account"/>
+    </RelativeLayout>
+</RelativeLayout>

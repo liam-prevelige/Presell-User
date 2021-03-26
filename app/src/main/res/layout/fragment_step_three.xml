@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/upload_design_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/lightBlue"
+        android:text="Make any necessary edits:"/>
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@color/red"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/upload_design_text"/>
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/upload_design_text"/>
+    <LinearLayout
+        android:id="@+id/edit_options_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selected_image"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/crop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crop"/>
+        <Button
+            android:id="@+id/rotate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rotate"/>
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/edit_options_container2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/edit_options_container"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:orientation="horizontal">-->
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/tint_button"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Add Filter"/>&ndash;&gt;-->
+<!--        <Button-->
+<!--            android:id="@+id/border_button"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Remove borders/colors"/>-->
+<!--    </LinearLayout>-->
+    <Button
+        android:id="@+id/confirm_edits_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_options_container"
+        android:background="@drawable/button_rounded_corners"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Confirm"/>
+</RelativeLayout>

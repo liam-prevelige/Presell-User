@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/payment_method_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkBackground"
+            android:text="Payment Method:"/>
+
+        <RadioGroup
+            android:id="@+id/payment_methods_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payment_method_text"/>
+
+        <Button
+            android:id="@+id/change_payment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payment_methods_radio_group"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:background="@drawable/button_rounded_corners"
+            android:drawableStart="@drawable/ic_add_circle_outline_24px"
+            android:drawablePadding="5dp"
+            android:drawableTint="@android:color/holo_green_light"
+            android:layout_marginBottom="20dp"
+            android:textSize="12sp"
+            android:text="Add Payment Method"/>
+
+        <TextView
+            android:id="@+id/shipping_address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkBackground"
+            android:layout_below="@id/change_payment_button"
+            android:text="Shipping Address:"/>
+
+        <RadioGroup
+            android:id="@+id/shipping_address_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shipping_address_text"/>
+
+        <Button
+            android:id="@+id/change_shipping_address_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shipping_address_radio_group"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:background="@drawable/button_rounded_corners"
+            android:drawableStart="@drawable/ic_add_circle_outline_24px"
+            android:drawablePadding="5dp"
+            android:drawableTint="@android:color/holo_green_light"
+            android:layout_marginBottom="20dp"
+            android:textSize="12sp"
+            android:text="Add Shipping Address"/>
+
+        <LinearLayout
+            android:id="@+id/summary_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/change_shipping_address_button"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Purchase summary:"/>
+            <TextView
+                android:id="@+id/item_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ITEM TITLE"/>
+            <TextView
+                android:id="@+id/item_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Custom ITEMTYPE"/>
+<!--            <TextView-->
+<!--                android:id="@+id/reserved_price_text"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Reserved Price: $X"/>-->
+            <TextView
+                android:id="@+id/time_remaining_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Est Time Remaining: "/>
+            <TextView
+                android:id="@+id/quantity_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Quantity: X"/>
+            <TextView
+                android:id="@+id/price_total_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/darkBackground"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="Total: $X.XX"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirm_order_button"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_green_light"
+            android:layout_below="@id/summary_holder"
+            android:text="Confirm Order!"/>
+    </RelativeLayout>
+
+</ScrollView>

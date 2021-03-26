@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"
+            android:text="Click on a point in your image, and spin the wheel to erase nearby sections with the same color."/>
+
+        <ImageView
+            android:id="@+id/selected_image"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:background="@color/red"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/title_text"/>
+
+        <TextView
+            android:id="@+id/time_warning_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_warning_24px"
+            android:drawableTint="@android:color/holo_red_light"
+            android:drawablePadding="5dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/selected_image"
+            android:text="For best results, you may need to adjust the tool's tolerance level"/>
+
+        <LinearLayout
+            android:id="@+id/color_selected_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/time_warning_text"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color selected: "/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@color/offWhite"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/remove_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/color_selected_container"
+            android:textAllCaps="false"
+            android:text="Remove Nearby Color"/>
+
+        <LinearLayout
+            android:id="@+id/undo_redo_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remove_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button_undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_rounded_corners"
+                android:text="Undo"/>
+            <Button
+                android:id="@+id/button_redo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_rounded_corners"
+                android:text="Redo"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_below="@id/undo_redo_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded_corners"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:text="Save Changes"/>
+    </RelativeLayout>
+</ScrollView>

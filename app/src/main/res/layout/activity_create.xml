@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_margin="20dp">
+    <TextView
+        android:id="@+id/step_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/darkBackground"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Step 1"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step_text"
+        android:layout_marginTop="10dp"/>
+    <FrameLayout
+        android:id="@+id/create_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@id/progressBar"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

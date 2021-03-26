@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+        android:id="@+id/currency_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/currency_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_currency_24px"
+            android:drawableTint="@color/darkBackground"
+            android:drawablePadding="5dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/lightBlue"
+            android:text="Preferred Currency: "/>
+        <Spinner
+            android:id="@+id/currency_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/payment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currency_container"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/payment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_payment_24px"
+            android:drawableTint="@color/darkBackground"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/lightBlue"
+            android:text="Payment Methods:"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/payment_methods_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_container"/>
+
+    <Button
+        android:id="@+id/change_payment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_methods_radio_group"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:background="@drawable/button_rounded_corners"
+        android:drawableStart="@drawable/ic_add_circle_outline_24px"
+        android:drawablePadding="5dp"
+        android:drawableTint="@android:color/holo_green_light"
+        android:layout_marginBottom="20dp"
+        android:textSize="12sp"
+        android:text="Add Payment Method"/>
+
+    <TextView
+        android:id="@+id/shipping_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkBackground"
+        android:layout_below="@id/change_payment_button"
+        android:text="Shipping Address:"/>
+
+    <RadioGroup
+        android:id="@+id/shipping_address_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shipping_address_text"/>
+
+    <Button
+        android:id="@+id/change_shipping_address_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shipping_address_radio_group"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:background="@drawable/button_rounded_corners"
+        android:drawableStart="@drawable/ic_add_circle_outline_24px"
+        android:drawablePadding="5dp"
+        android:drawableTint="@android:color/holo_green_light"
+        android:layout_marginBottom="20dp"
+        android:textSize="12sp"
+        android:text="Add Shipping Address"/>
+
+    <TextView
+        android:id="@+id/not_signed_in_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/change_shipping_address_button"
+        android:text="Not signed in. Login/Sign up to access all settings."/>
+    </RelativeLayout>
+</ScrollView>

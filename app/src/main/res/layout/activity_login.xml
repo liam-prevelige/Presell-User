@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_layout_login"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_design">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:background="@color/lightBlue"
+        android:orientation="vertical">
+
+        <!--        <TextView-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textStyle="bold"-->
+<!--            android:paddingTop="20dp"-->
+<!--            android:paddingBottom="50dp"-->
+<!--            android:textColor="@color/lightBlue"-->
+<!--            android:text="Presell"-->
+<!--            android:textSize="45sp" />-->
+
+        <ImageView
+            android:id="@+id/presell_logo_image"
+            android:layout_width="195dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/display_app_logo"
+            android:src="@mipmap/presell_logo_foreground" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/presell_logo_image">
+
+            <Space
+                android:layout_height="10dp"
+                android:layout_width="match_parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="5dp"
+                    android:src="@android:drawable/ic_dialog_email"
+                    android:tint="@color/offWhite" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:textColorHint="@color/offWhite"
+                    android:textColor="@color/offWhite"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"/>
+
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:paddingStart="15dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/ic_vpn_key"
+                        android:tint="@color/offWhite" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:textColorHint="@color/offWhite"
+                        android:textColor="@color/offWhite"
+                        android:hint="Password"
+                        android:inputType="textPassword"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <Button
+                    android:id="@+id/sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_rounded_corners"
+                    android:text="Sign in" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/sign_up_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_set"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/no_account_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightBlue"
+                android:layout_weight="1"
+                android:onClick="onClickSignUp"
+                android:textAlignment="center"
+                android:paddingTop="15dp"
+                android:text="Don't have an account?"
+                android:textColor="@color/offWhite"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/register_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightBlue"
+                android:layout_weight="1"
+                android:onClick="onClickSignUp"
+                android:paddingTop="8dp"
+                android:textAlignment="center"
+                android:paddingBottom="15dp"
+                android:text="@string/sign_up_text"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/or_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_up_container"
+            android:background="@color/lightBlue"
+            android:gravity="center"
+            android:text="OR"
+            android:textColor="@color/offWhite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/enter_without_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/or_text"
+            android:background="@color/lightBlue"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/enter_without_text"
+            android:textColor="@android:color/holo_green_light"
+            android:onClick="onClickNoSignIn"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+</FrameLayout>
